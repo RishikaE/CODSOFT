@@ -14,3 +14,15 @@ You can incorporate additional details as follows:
 5. Limit the number of attempts the user has to guess the number.
 6. Add the option for multiple rounds, allowing the user to play again.
 7. Display the user's score, which can be based on the number of attempts taken or rounds won.
+
+
+TASK 2
+
+STUDENT GRADE CALCULATOR
+
+1. Input: Take marks obtained (out of 100) in each subject.
+2. Calculate Total Marks: Sum up the marks obtained in all subjects.
+3. Calculate Average Percentage: Divide the total marks by the total number of subjects to get the
+average percentage.
+4. Grade Calculation: Assign grades based on the average percentage achieved.
+5. Display Results: Show the total marks, average percentage, and the corresponding grade to the user
