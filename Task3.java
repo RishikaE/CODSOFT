@@ -18,7 +18,7 @@ class BankAccount{
 	public double getBalance() {
 		return balance;
 	}
-	
+	//Method to add deposit to the existing balance
 	public boolean deposit(double amount) {
 		if(amount > 0) 
 			balance += amount;
@@ -27,7 +27,7 @@ class BankAccount{
 			return true;
 		}
 		
-	
+	//Method to remove the withdraw amount from the balance
 	public boolean withdraw(double amount) throws InsufficientFundsException{
 		if(amount > 0 && amount <= balance) 
 			balance -= amount;
@@ -47,6 +47,7 @@ class ATM{
 	}
 	
 	public void displayMenu() {
+		//Displaying the user the choices available on the ATM
 		System.out.println("Choose your option :");
 		System.out.println("1. Check Balance");
 		System.out.println("2. Deposit");
@@ -59,12 +60,14 @@ class ATM{
 		int choice;
 		do {
 			displayMenu();
+			//Asking user to enter their change
 			System.out.print("Enter Your Choice : ");
 			choice = scanner.nextInt();
 		
 		try {
 			switch(choice) {
 				case 1:
+					//Displaying the balance
 					System.out.println("Current balance : "+userAccount.getBalance());
 					break;
 				case 2:
@@ -86,6 +89,7 @@ class ATM{
 					
 					break;
 				case 4:
+					//Exit
 					System.out.println("Thank You :) for using the ATM!");
 					break;
 				default:
@@ -99,6 +103,9 @@ class ATM{
 }	
 class Task3 {
 	public static void main(String[] args) {
+		System.out.println("Welcome To ATM :)");
+		System.out.println("How we can help you ?");
+		//Initial amount balance is 1000
 		BankAccount userAccount = new BankAccount(1000);
 		ATM atm = new ATM(userAccount);
 		atm.processTrascation();
